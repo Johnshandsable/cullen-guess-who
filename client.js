@@ -14,6 +14,10 @@ $(document).ready(function () {
 let guess = getName();
 
 function render() {
+  // emptying these on reset
+  $('#guessWho').empty();
+  $('#profilePics').empty();
+
   $('#guessWho').append(`
     <h1 id="guess"> Guess Who This Is: ${guess}</h1>
   `);
@@ -43,7 +47,13 @@ function checkUserWasRight() {
 
   if ($(this).data('name') == guess) {
     console.log('you win!');
+    resetGame();
   } else {
     console.log('you guessed wrong!');
   }
 } // end checkUserWasRight
+
+function resetGame() {
+  guess = getName();
+  render();
+}
