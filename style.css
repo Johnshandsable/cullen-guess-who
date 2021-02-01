@@ -1,0 +1,19 @@
+body {
+  background-color: aqua;
+}
+
+/* Classes */
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profile {
+  margin: 8px 8px;
+}
+
+.guess {
+  font-size: 30px;
+}
